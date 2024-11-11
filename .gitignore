@@ -1,0 +1,44 @@
+# [ zrfisaac ]
+
+# [ about ]
+# - author : Isaac Caires
+# . - email : zrfisaac@gmail.com
+# . - site : zrfisaac.github.io
+
+# [ gitignore ]
+*history
+*.dat
+*.Identifier
+*.log
+*.*-prev
+.cache
+.config/chromium
+.config/dconf
+.config/geany/geany*socket*
+.config/geany/session.conf
+.config/keybindings.conf
+.config/session.conf
+.config/gh
+.config/GitHub Desktop
+.config/pulse
+.ICEauthority
+.local
+.mozilla
+.pki
+.xsession-*
+.Xauthority
+.wine
+docker/*/
+trash/*/
+virtualbox/*/
+
+# : - zrfisaac
+*.Identifier
+*.classified.*
+.DS_Store
+.git
+*.private.*
+.temp
+.vs
+.*
+_*
