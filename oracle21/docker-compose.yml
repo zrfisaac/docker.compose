@@ -13,10 +13,9 @@
 
 # [ docker-compose ]
 services:
-  oracle:
-    #image: container-registry.oracle.com/database/express:21.3.0-xe
+  oracle21:
     image: container-registry.oracle.com/database/express:21.3.0-xe
-    container_name: main_oracle
+    container_name: main_oracle21
     restart: always
     volumes:
       - "./public:/public"

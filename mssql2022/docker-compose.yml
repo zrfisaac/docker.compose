@@ -7,9 +7,9 @@
 
 # [ docker-compose ]
 services:
-  mssql:
+  mssql2022:
     image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: main_mssql
+    container_name: main_mssql2022
     user: root
     restart: always
     volumes:

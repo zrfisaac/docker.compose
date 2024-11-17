@@ -7,15 +7,14 @@
 
 # [ docker-compose ]
 services:
-  tomcat:
-    image: tomcat:9-jre8
-    container_name: main_tomcat
+  postgres14:
+    image: postgres:14
+    container_name: main_postgres14
+    environment:
+      POSTGRES_PASSWORD: "ABcd!@34"
     volumes:
       - "./public:/public"
-      - "./webapps:/usr/local/tomcat/webapps"
-    environment:
-      - "WEBRUN_HOME=/usr/local/tomcat/webapps"
     ports:
-      - 8080:8080
+      - "5432:5432"
     #network_mode: "host"
     networks: ["local"]

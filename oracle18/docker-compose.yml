@@ -13,7 +13,7 @@
 
 # [ docker-compose ]
 services:
-  oracle:
+  oracle18:
     image: container-registry.oracle.com/database/express:18.4.0-xe
     container_name: main_oracle18
     restart: always
