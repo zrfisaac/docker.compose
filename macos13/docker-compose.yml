@@ -1,0 +1,31 @@
+# [ zrfisaac ]
+
+# [ about ]
+# - author : Isaac Caires
+# . - email : zrfisaac@gmail.com
+# . - site : zrfisaac.github.io
+
+# [ url ]
+
+# - : https://github.com/dockur/macos
+
+# [ docker-compose ]
+services:
+  macos13:
+    image: dockurr/macos
+    container_name: main_macos13
+    environment:
+      VERSION: "13"
+      RAM_SIZE: "2G"
+      CPU_CORES: "2"
+    devices:
+      - /dev/kvm
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+      - 5900:5900/tcp
+      - 5900:5900/udp
+    stop_grace_period: 2m
+    #network_mode: "host"
+    networks: ["local"]
