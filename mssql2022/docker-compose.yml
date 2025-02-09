@@ -1,0 +1,24 @@
+# [ zrfisaac ]
+
+# [ about ]
+# - author : Isaac Caires
+# . - email : zrfisaac@gmail.com
+# . - site : zrfisaac.github.io
+
+# [ docker-compose ]
+services:
+  mssql2022:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql2022
+    user: root
+    restart: always
+    volumes:
+      - "./public:/public"
+      - "./config/mssql.conf:/var/opt/mssql/mssql.conf"
+      - "./config/openssl.cnf:/etc/ssl/openssl.cnf"
+    ports:
+      - "1433:1433"
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "SA_PASSWORD=ABcd!@34"
+    network_mode: "host"
